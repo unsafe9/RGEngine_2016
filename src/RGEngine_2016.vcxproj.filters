@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{6c527cd8-774c-477a-815f-5589c0add6e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components">
+      <UniqueIdentifier>{dc56f196-ceea-4904-8cb0-bd8714e5792b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Collider">
+      <UniqueIdentifier>{2c992216-123c-4e6b-bf6e-636cd793362c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Collider\Box">
+      <UniqueIdentifier>{85ae539c-ea55-46db-b471-7ce814d8d7c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Collider\Circle">
+      <UniqueIdentifier>{1d90e3b9-dd1b-4d43-afb9-8b84af103744}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Audio">
+      <UniqueIdentifier>{8c821802-175c-45f2-a952-efb73a1c739b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Audio\Source">
+      <UniqueIdentifier>{d87ca464-25b5-40c9-af8e-e5ff7f99d8ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Audio\Listener">
+      <UniqueIdentifier>{88e350f6-1f64-480d-8a8a-336d9df4a32b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Renderer">
+      <UniqueIdentifier>{394cd9db-b82f-44ca-b289-c1e50247beac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Renderer\Sprite">
+      <UniqueIdentifier>{c2869d89-d667-446d-8194-180f7cd45b15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Renderer\Animation">
+      <UniqueIdentifier>{b127f488-b240-4b5d-b9df-5f50b0d3ad36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Renderer\Text">
+      <UniqueIdentifier>{546360ca-c1a0-4a62-ab22-73840a40a1db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\DataStreams">
+      <UniqueIdentifier>{e40b23a8-fa7d-497a-94c9-a52c9b49ec54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\DataStreams\XML">
+      <UniqueIdentifier>{d305cc72-a698-46bf-88ad-14134a356cbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\DataStreams\JSON">
+      <UniqueIdentifier>{95bb81f3-1d27-4959-989e-8f48dcc23ea3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\DataStreams\File">
+      <UniqueIdentifier>{0fbc793c-79e4-4d72-89ad-df4e4d80e730}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{0de9da5f-b6b4-4e99-8085-2735418fa477}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Application">
+      <UniqueIdentifier>{429c3671-0ba5-483d-bbd7-461c45124c07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Graphic">
+      <UniqueIdentifier>{760fb4cd-8cef-433a-ab36-f732efcbe680}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Types">
+      <UniqueIdentifier>{6fb01e2f-b2e5-4e1e-bbdf-a3390b6b12ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Math">
+      <UniqueIdentifier>{4ff9afc0-9807-4509-8e6c-aa58f511ba32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Time">
+      <UniqueIdentifier>{70c85e88-8e31-4ff1-85da-5adf28b6cda2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Input">
+      <UniqueIdentifier>{c82f9e8e-8b18-4b71-b048-6dacd0a44125}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Scene">
+      <UniqueIdentifier>{4d991aa2-986e-4c5d-9ead-69d7310b3c6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\GameObject">
+      <UniqueIdentifier>{84a8d3e7-e804-42b3-bb0c-4a4b914f7d7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Component">
+      <UniqueIdentifier>{d69be86a-db44-4d0d-9c6e-0208bbea2ecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\DataStream">
+      <UniqueIdentifier>{b8cc4987-6896-4d20-a82c-569a1f71120d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Asset">
+      <UniqueIdentifier>{ef82901c-50a8-40af-b776-22ac8609f92b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Asset\Texture">
+      <UniqueIdentifier>{03b7e59f-8cef-4301-9868-159bbee9bcc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Asset\Sound">
+      <UniqueIdentifier>{a3c9d424-d9ea-486e-8394-a2fee78d0d8d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RGApplication.cpp">
+      <Filter>Framework\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="RGGraphic.cpp">
+      <Filter>Framework\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="RGTime.cpp">
+      <Filter>Framework\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="RGInput.cpp">
+      <Filter>Framework\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="RGScene.cpp">
+      <Filter>Framework\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="RGComponent.cpp">
+      <Filter>Framework\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="RGGameObject.cpp">
+      <Filter>Framework\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="RGAssetTexture.cpp">
+      <Filter>Framework\Asset\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="RGAssetSound.cpp">
+      <Filter>Framework\Asset\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="RGAssetManager.cpp">
+      <Filter>Framework\Asset</Filter>
+    </ClCompile>
+    <ClCompile Include="RGDataStreamJSON.cpp">
+      <Filter>Engine\DataStreams\JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="RGDataStreamFile.cpp">
+      <Filter>Engine\DataStreams\File</Filter>
+    </ClCompile>
+    <ClCompile Include="RGDataStreamXML.cpp">
+      <Filter>Engine\DataStreams\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="RGComponentSpriteRenderer.cpp">
+      <Filter>Engine\Components\Renderer\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="RGComponentTextRenderer.cpp">
+      <Filter>Engine\Components\Renderer\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="RGComponentAnimationRenderer.cpp">
+      <Filter>Engine\Components\Renderer\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="RGComponentAudioSource.cpp">
+      <Filter>Engine\Components\Audio\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="RGComponentBoxCollider.cpp">
+      <Filter>Engine\Components\Collider\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="RGComponentCollider.cpp">
+      <Filter>Engine\Components\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="RGAssetTextureManager.cpp">
+      <Filter>Framework\Asset\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="RGAssetSoundManager.cpp">
+      <Filter>Framework\Asset\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="RGComponentCircleCollider.cpp">
+      <Filter>Engine\Components\Collider\Circle</Filter>
+    </ClCompile>
+    <ClCompile Include="RGComponentAudioListener.cpp">
+      <Filter>Engine\Components\Audio\Listener</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RGApplication.h">
+      <Filter>Framework\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="RGGraphic.h">
+      <Filter>Framework\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="RGTypes.h">
+      <Filter>Framework\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="RGMath.h">
+      <Filter>Framework\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="RGTime.h">
+      <Filter>Framework\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="RGInput.h">
+      <Filter>Framework\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="RGScene.h">
+      <Filter>Framework\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="RGComponent.h">
+      <Filter>Framework\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="RGGameObject.h">
+      <Filter>Framework\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="RGAssetTexture.h">
+      <Filter>Framework\Asset\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="RGAssetSound.h">
+      <Filter>Framework\Asset\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="RGAssetManager.h">
+      <Filter>Framework\Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="RGDataStreamJSON.h">
+      <Filter>Engine\DataStreams\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="RGDataStreamFile.h">
+      <Filter>Engine\DataStreams\File</Filter>
+    </ClInclude>
+    <ClInclude Include="RGDataStreamXML.h">
+      <Filter>Engine\DataStreams\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="RGComponentSpriteRenderer.h">
+      <Filter>Engine\Components\Renderer\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="RGComponentTextRenderer.h">
+      <Filter>Engine\Components\Renderer\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="RGComponentAnimationRenderer.h">
+      <Filter>Engine\Components\Renderer\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="RGComponentRenderer.h">
+      <Filter>Engine\Components\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="RGComponentAudioSource.h">
+      <Filter>Engine\Components\Audio\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="RGComponentBoxCollider.h">
+      <Filter>Engine\Components\Collider\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="RGComponentCollider.h">
+      <Filter>Engine\Components\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="RGAssetTextureManager.h">
+      <Filter>Framework\Asset\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="RGAssetSoundManager.h">
+      <Filter>Framework\Asset\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="RGComponentCircleCollider.h">
+      <Filter>Engine\Components\Collider\Circle</Filter>
+    </ClInclude>
+    <ClInclude Include="RGComponentAudioListener.h">
+      <Filter>Engine\Components\Audio\Listener</Filter>
+    </ClInclude>
+    <ClInclude Include="RGDataStream.h">
+      <Filter>Framework\DataStream</Filter>
+    </ClInclude>
+    <ClInclude Include="RGMath.hpp">
+      <Filter>Framework\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="RGEngine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RGMath.inl">
+      <Filter>Framework\Math</Filter>
+    </None>
+  </ItemGroup>
+</Project>

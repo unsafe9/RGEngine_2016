@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{938FBEF6-3D43-4F49-8F1F-83D91CC84D44}</ProjectGuid>
+    <RootNamespace>RGEngine_2016</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)dep\d3d\include;$(SolutionDir)dep\fmod\include;$(IncludePath)</IncludePath>
+    <ReferencePath>$(SolutionDir)dep\d3d\dll\x86;$(SolutionDir)dep\fmod\dll;$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)dep\d3d\lib\x86;$(SolutionDir)dep\fmod\lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(VC_SourcePath);</SourcePath>
+    <TargetExt>.lib</TargetExt>
+    <OutDir>$(SolutionDir)bin\lib\</OutDir>
+    <IntDir>$(SolutionDir)temp\$(Configuration)\</IntDir>
+    <TargetName>Debug_$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)dep\d3d\include;$(SolutionDir)dep\fmod\include;$(IncludePath)</IncludePath>
+    <ReferencePath>$(SolutionDir)dep\d3d\dll\x86;$(SolutionDir)dep\fmod\dll;$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)dep\d3d\lib\x86;$(SolutionDir)dep\fmod\lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(VC_SourcePath);</SourcePath>
+    <TargetExt>.lib</TargetExt>
+    <OutDir>$(SolutionDir)bin\lib\</OutDir>
+    <IntDir>$(SolutionDir)temp\$(Configuration)\</IntDir>
+    <TargetName>Release_$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>if not exist $(SolutionDir)bin\dll mkdir $(SolutionDir)bin\dll
+if not exist $(SolutionDir)bin\include mkdir $(SolutionDir)bin\include
+
+for /R $(ProjectDir) %%i in (*.dll) do copy %%i $(SolutionDir)bin\dll\ /Y
+for /R $(ProjectDir) %%i in (*.h *.inl *.hpp) do copy %%i $(SolutionDir)bin\include\ /Y
+
+for /R $(SolutionDir)dep\ %%i in (*.h *.inl *.hpp) do copy %%i $(SolutionDir)bin\include\ /Y</Command>
+    </PostBuildEvent>
+    <Lib>
+      <AdditionalDependencies>d3dx9.lib;d3d9.lib;DxErr.lib;dinput8.lib;dxguid.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)dep\d3d\lib\x86;$(SolutionDir)dep\fmod\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <PreBuildEvent>
+      <Command>for /R $(SolutionDir)bin %%i in (*.h *.inl *.hpp *.dll) do del %%i</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist $(SolutionDir)bin\dll mkdir $(SolutionDir)bin\dll
+if not exist $(SolutionDir)bin\include mkdir $(SolutionDir)bin\include
+
+for /R $(ProjectDir) %%i in (*.dll) do copy %%i $(SolutionDir)bin\dll\ /Y
+for /R $(ProjectDir) %%i in (*.h *.inl *.hpp) do copy %%i $(SolutionDir)bin\include\ /Y
+
+for /R $(SolutionDir)dep\ %%i in (*.h *.inl *.hpp) do copy %%i $(SolutionDir)bin\include\ /Y</Command>
+    </PostBuildEvent>
+    <Lib>
+      <AdditionalDependencies>d3dx9.lib;d3d9.lib;DxErr.lib;dinput8.lib;dxguid.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)dep\d3d\lib\x86;$(SolutionDir)dep\fmod\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <PreBuildEvent>
+      <Command>for /R $(SolutionDir)bin %%i in (*.h *.inl *.hpp *.dll) do del %%i</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="RGApplication.cpp" />
+    <ClCompile Include="RGAssetManager.cpp" />
+    <ClCompile Include="RGAssetSound.cpp" />
+    <ClCompile Include="RGAssetSoundManager.cpp" />
+    <ClCompile Include="RGAssetTexture.cpp" />
+    <ClCompile Include="RGAssetTextureManager.cpp" />
+    <ClCompile Include="RGComponent.cpp" />
+    <ClCompile Include="RGComponentAnimationRenderer.cpp" />
+    <ClCompile Include="RGComponentAudioListener.cpp" />
+    <ClCompile Include="RGComponentAudioSource.cpp" />
+    <ClCompile Include="RGComponentBoxCollider.cpp" />
+    <ClCompile Include="RGComponentCircleCollider.cpp" />
+    <ClCompile Include="RGComponentCollider.cpp" />
+    <ClCompile Include="RGComponentSpriteRenderer.cpp" />
+    <ClCompile Include="RGComponentTextRenderer.cpp" />
+    <ClCompile Include="RGDataStreamFile.cpp" />
+    <ClCompile Include="RGDataStreamJSON.cpp" />
+    <ClCompile Include="RGDataStreamXML.cpp" />
+    <ClCompile Include="RGGameObject.cpp" />
+    <ClCompile Include="RGGraphic.cpp" />
+    <ClCompile Include="RGInput.cpp" />
+    <ClCompile Include="RGScene.cpp" />
+    <ClCompile Include="RGTime.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RGApplication.h" />
+    <ClInclude Include="RGAssetManager.h" />
+    <ClInclude Include="RGAssetSound.h" />
+    <ClInclude Include="RGAssetSoundManager.h" />
+    <ClInclude Include="RGAssetTexture.h" />
+    <ClInclude Include="RGAssetTextureManager.h" />
+    <ClInclude Include="RGComponent.h" />
+    <ClInclude Include="RGComponentAnimationRenderer.h" />
+    <ClInclude Include="RGComponentAudioListener.h" />
+    <ClInclude Include="RGComponentAudioSource.h" />
+    <ClInclude Include="RGComponentBoxCollider.h" />
+    <ClInclude Include="RGComponentCircleCollider.h" />
+    <ClInclude Include="RGComponentCollider.h" />
+    <ClInclude Include="RGComponentRenderer.h" />
+    <ClInclude Include="RGComponentSpriteRenderer.h" />
+    <ClInclude Include="RGComponentTextRenderer.h" />
+    <ClInclude Include="RGDataStream.h" />
+    <ClInclude Include="RGDataStreamFile.h" />
+    <ClInclude Include="RGDataStreamJSON.h" />
+    <ClInclude Include="RGDataStreamXML.h" />
+    <ClInclude Include="RGEngine.h" />
+    <ClInclude Include="RGGameObject.h" />
+    <ClInclude Include="RGGraphic.h" />
+    <ClInclude Include="RGInput.h" />
+    <ClInclude Include="RGMath.h" />
+    <ClInclude Include="RGMath.hpp" />
+    <ClInclude Include="RGScene.h" />
+    <ClInclude Include="RGTime.h" />
+    <ClInclude Include="RGTypes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RGMath.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
