@@ -20,6 +20,7 @@
 # Directories
 ipch
 temp
+dep
 Debug
 Release
 
